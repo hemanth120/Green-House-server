@@ -40,7 +40,7 @@ const topics = [
   "soil/sensor2",
   "solar/power",
   "solar/pumppower",
-  "solar/dripperPower",
+  "solar/dripperpower",
 ];
 
 mqttClient.subscribe(topics, (err) => {

@@ -56,31 +56,31 @@ mqttClient.on("message", (topic, message) => {
   const value = parseFloat(message.toString());
   console.log(`Received message from topic "${topic}": ${value}`);
   switch (topic) {
-    case "sensor/temperature":
+    case "bme680/temp":
       sensorData.temperature = value;
       break;
-    case "sensor/humidity":
+    case "bme680/hum":
       sensorData.humidity = value;
       break;
-    case "sensor/gas":
+    case "bme680/gas":
       sensorData.gas = value;
       break;
-    case "sensor/pressure":
+    case "bme680/pres":
       sensorData.pressure = value;
       break;
-    case "sensor/soilMoisture1":
+    case "soil/sensor1":
       sensorData.soilMoisture1 = value;
       break;
-    case "sensor/soilMoisture2":
+    case "soil/sensor2":
       sensorData.soilMoisture2 = value;
       break;
-    case "sensor/solarPower":
+    case "solar/power":
       sensorData.solarPower = value;
       break;
-    case "sensor/pumpPower":
+    case "solar/pumppower":
       sensorData.pumpPower = value;
       break;
-    case "sensor/dripperPower":
+    case "solar/dripperpower":
       sensorData.dripperPower = value;
       break;
     default:

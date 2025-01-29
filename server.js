@@ -129,7 +129,7 @@ app.get("/dripperPower", (req, res) => {
 app.post("/buttons", (req, res) => {
   const { button, state } = req.body;
   const topic = button === 1 ? "wpt/pump" : "wpt/sprinkler";
-  const message = state ? "ON" : "OFF";
+  const message = state ? "1" : "0";
 
   mqttClient.publish(topic, message, (err) => {
     if (err) {
